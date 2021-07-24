@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
   },
 
   row1column2: {
-    display: "flex",
     flexGrow: 1,
   },
 
@@ -42,7 +41,8 @@ const styles = StyleSheet.create({
   },
 
   repoDescription: {
-    marginBottom: 6,
+    marginBottom: 8,
+    flexDirection: "row",
   },
 
   tag: {
@@ -69,9 +69,12 @@ const RepositoryItem = ({ repo }) => {
           >
             {repo.fullName}
           </Text>
-          <Text style={styles.repoDescription} color="textSecondary">
-            {repo.description}
-          </Text>
+
+          <View style={styles.repoDescription}>
+            <Text style={{ flex: 1 }} color="textSecondary">
+              {repo.description}
+            </Text>
+          </View>
 
           <View>
             <Text style={styles.tag} color="light">
