@@ -5,7 +5,7 @@ import theme from "../theme";
 
 const styles = StyleSheet.create({
   textInput: {
-    marginBottom: 15,
+    marginBottom: 8,
     borderWidth: 1,
     borderColor: theme.colors.backgroundPrimary,
     borderRadius: 4,
@@ -14,12 +14,15 @@ const styles = StyleSheet.create({
     paddingTop: 6,
     paddingBottom: 6,
   },
+  error: {
+    borderColor: theme.colors.error,
+  },
 });
 
-const TextInput = ({ style, ...props }) => {
-  const TextInputStyle = [style, styles.textInput];
+const TextInput = ({ style, error, ...props }) => {
+  const textInputStyle = [style, styles.textInput, error && styles.error];
 
-  return <NativeTextInput style={TextInputStyle} {...props} />;
+  return <NativeTextInput style={textInputStyle} {...props} />;
 };
 
 export default TextInput;

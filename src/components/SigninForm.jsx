@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Pressable, StyleSheet } from "react-native";
 
-import FormikTextInput from "./FormitTextInput";
+import FormikTextInput from "./FormikTextInput";
 import Text from "./Text";
 import theme from "../theme";
 
