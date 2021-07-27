@@ -1,7 +1,13 @@
 import React from "react";
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import Text from "../components/Text";
+
+const styles = StyleSheet.create({
+  statsCard: {
+    alignItems: "center",
+  },
+});
 
 const kFormatter = (num) =>
   Math.abs(num) > 999
@@ -10,7 +16,7 @@ const kFormatter = (num) =>
 
 const StatsCard = ({ property, value }) => {
   return (
-    <View>
+    <View style={styles.statsCard}>
       <Text fontSize="subheading" fontWeight="bold">
         {kFormatter(value)}
       </Text>
