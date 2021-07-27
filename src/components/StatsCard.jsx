@@ -6,6 +6,7 @@ import Text from "../components/Text";
 const styles = StyleSheet.create({
   statsCard: {
     alignItems: "center",
+    marginBottom: 5,
   },
 });
 

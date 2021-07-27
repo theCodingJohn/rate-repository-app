@@ -33,7 +33,7 @@ const AppBar = () => {
         <Pressable style={styles.nav_btn}>
           <Link to="/signin">
             <Text color="light" fontSize="heading" fontWeight="bold">
-              Signin
+              Sign in
             </Text>
           </Link>
         </Pressable>

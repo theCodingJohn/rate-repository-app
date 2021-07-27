@@ -10,6 +10,7 @@ import theme from "../theme";
 const styles = StyleSheet.create({
   main: {
     backgroundColor: theme.colors.backgroundPrimary,
+    flex: 1,
   },
 });
 
